@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hot Beans Web | Apply</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Hot Beans Web</h1>
+  <nav class="nav-buttons">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="company.html" class="nav-btn">Company</a>
+    <a href="trainees.html" class="nav-btn">Trainees</a>
+    <a href="jobs.html" class="nav-btn">Jobs</a>
+    <a href="apply.html" class="nav-btn highlight">Apply</a>
+    <a href="courses.html" class="nav-btn">Courses</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Apply Now</h2>
+    <p>Start your career with Hot Beans Web</p>
+  </div>
+</section>
+
+<section class="reveal">
+
+  <h2>Application Form</h2>
+  <p>Please complete the form below. All fields marked with * are required.</p>
+
+  <form class="apply-form">
+
+    <label for="name">Full Name *</label><br>
+    <input type="text" id="name" placeholder="Enter your full name" required><br><br>
+
+    <label for="email">Email Address *</label><br>
+    <input type="email" id="email" placeholder="Enter your email address" required><br><br>
+
+    <label for="role">Role Applying For *</label><br>
+    <select id="role" required>
+      <option value="">Select a role</option>
+      <option>Trainee Web Developer</option>
+      <option>Junior Web Developer</option>
+      <option>Senior Web Developer</option>
+      <option>UX Designer</option>
+    </select><br><br>
+
+    <label for="experience">Why do you want to apply? *</label><br>
+    <textarea id="experience" rows="5" placeholder="Tell us about your interest, skills, and experience..." required></textarea><br><br>
+
+    <label for="cv">Upload CV (PDF or Word)</label><br>
+    <input type="file" id="cv" accept=".pdf,.doc,.docx"><br><br>
+
+    <button type="submit" class="btn">Submit Application →</button>
+
+  </form>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Hot Beans Web</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

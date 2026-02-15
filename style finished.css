@@ -1,0 +1,250 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* --- BODY --- */
+body {
+  background: #e2d6c0;
+  color: #ae8e51;
+  line-height: 1.6;
+}
+
+/* --- HEADER + NAV --- */
+header {
+  background: #e2d6c0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  border: 2px solid #ae8e51;
+  color: #ae8e51;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.highlight {
+  background: #ae8e51;
+  color: #e2d6c0;
+}
+
+.nav-btn:hover,
+.nav-btn.highlight:hover {
+  background: #ae8e51;
+  color: #e2d6c0;
+  transform: scale(1.12);
+  box-shadow: 0 0 18px #ae8e51;
+}
+
+/* --- HERO --- */
+.hero {
+  min-height: 90vh;
+  background: radial-gradient(circle at center, #e2d6c0, #ae8e51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 700px;
+  animation: heroFade 1.5s ease forwards;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* General sections background (matches hero) */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: radial-gradient(circle at center, #e2d6c0 0%, #ae8e51 100%);
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e2d6c0;
+  text-shadow:
+    -1px -1px 0 #ae8e51,
+     1px -1px 0 #ae8e51,
+    -1px  1px 0 #ae8e51,
+     1px  1px 0 #ae8e51;
+}
+
+/* --- SECTIONS --- */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* --- REVEAL EFFECT --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  background: #ae8e51;
+  color: #e2d6c0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ae8e51;
+  color: #ae8e51;
+}
+
+.btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #ae8e51;
+}
+
+/* --- CARDS --- */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  background: #e2d6c0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card.active {
+  flex: 2.5;
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card-extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card.active .card-extra {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+.card-extra img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-extra .btn {
+  display: inline-block;
+  margin-top: 15px;
+  position: sticky;
+  bottom: 10px;
+}
+
+/* --- FORM STYLING (Apply Page) --- */
+.apply-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.apply-form label {
+  font-weight: 600;
+}
+
+.apply-form input,
+.apply-form textarea,
+.apply-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ae8e51;
+  font-size: 1rem;
+  background-color: #f9f4f0;
+  color: #333;
+  margin-bottom: 15px;
+  transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus,
+.apply-form select:focus {
+  outline: none;
+  border-color: #ff4b2b;
+  background-color: #fff5f0;
+}
+
+/* --- FOOTER --- */
+footer {
+  background:#e2d6c0;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes heroFade {
+  from {opacity:0; transform:translateY(40px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* --- RESPONSIVE --- */
+@media(max-width:768px){
+  .hero h2{font-size:2rem;}
+  .nav-buttons{flex-wrap:wrap; justify-content:center;}
+  .card {width: 90%;}
+}

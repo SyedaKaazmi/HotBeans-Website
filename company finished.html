@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hot Beans Web | Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Hot Beans Web</h1>
+  <nav class="nav-buttons">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="company.html" class="nav-btn highlight">Company</a>
+    <a href="trainees.html" class="nav-btn">Trainees</a>
+    <a href="jobs.html" class="nav-btn">Jobs</a>
+    <a href="apply.html" class="nav-btn">Apply</a>
+    <a href="courses.html" class="nav-btn">Courses</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>About Hot Beans Web</h2>
+    <p>Developing modern websites and empowering the next generation of web developers</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Who We Are</h2>
+  <p>
+    Hot Beans Web was founded in 2018 by Jane Doe and John Smith in London, UK. 
+    Since our inception, we have focused on creating modern, responsive websites for businesses of all sizes. 
+    We combine innovative design, reliable technology, and a passion for helping people learn web development.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Our Purpose</h2>
+  <p>
+    Our company exists to bridge the gap between education and real-world web development. 
+    We provide a platform where aspiring developers can learn by doing, gaining practical experience with real clients and projects.
+    At the same time, we deliver high-quality websites and solutions to our customers worldwide.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Our Mission</h2>
+  <p>
+    We are committed to nurturing talent through mentorship, structured training programs, and hands-on project experience. 
+    Our mission is to create a community of skilled, confident, and innovative web developers ready to take on the challenges of the modern digital world.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Company Vision & Values</h2>
+  <p>
+    At Hot Beans Web, integrity, creativity, and collaboration are at the heart of everything we do. 
+    Our vision is to empower both our clients and our team members to achieve their goals through technology, learning, and innovation.
+    We strive to make web development accessible, engaging, and meaningful for everyone we work with.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Where We Are</h2>
+  <p>
+    Hot Beans Web is headquartered in London, UK, but our services and training programs are accessible worldwide online. 
+    Our digital-first approach allows us to connect with clients, trainees, and partners globally.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Why Our Website Exists</h2>
+  <p>
+    This website serves as a hub for information, courses, job opportunities, and trainee development programs. 
+    It showcases our projects, guides aspiring developers, and provides a gateway for anyone interested in joining our team or learning from us.
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Hot Beans Web</p>
+</footer>
+
+<script>
+  // Scroll reveal animation for sections
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 150;
+
+      if(revealTop < windowHeight - revealPoint){
+        reveals[i].classList.add('active');
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
